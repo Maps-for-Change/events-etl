@@ -2,6 +2,9 @@
 
 Start of ETL for all events for progressive applications.
 
+# Norms
+
+* Please use GitFlow if possible, and send PR to `develop` **not `master`**
 
 # Setting up Local Heroku
 The following is based on the [Heroku Python Getting Started Guide](https://devcenter.heroku.com/articles/getting-started-with-python#run-the-app-locally)
@@ -39,7 +42,7 @@ or
 
 # Setting Up ETL
 
-# Environment Variables
+## Environment Variables
 
 | key | description |
 |--- |--- |
