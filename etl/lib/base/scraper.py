@@ -1,3 +1,5 @@
+# encoding=utf8
+
 import abc
 
 class Scraper(object):
