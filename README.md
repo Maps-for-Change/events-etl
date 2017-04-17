@@ -51,3 +51,34 @@ or
 | `AWS_HOST` | AWS Host for S3 |
 | `S3_BUCKET` | Name of the bucket we're going to put the data in |
 | `CLOUDFRONT_ID` | Cloudfront instance dedicated to the S3 instance |
+
+
+# Usage per CRM
+
+## NationBuilder
+
+```
+scraper = nb.EventsScraper("https://website.nationbuilder.com", \
+              access_token="access_token", \
+              calendar_id=1, \ #optional
+              slug="slug",
+              event_types={"Phonebank": "phonebank"},
+              supergroup="SuperGroup") 
+
+```
+
+| key | description |
+|--- |--- |
+| `access_token` | Token used for NationBuilder apps |
+| `calendar_id` | Optional. Id for target campaign |
+| `slug` | Slug for the website |
+| `event_types` | `Dict`. Optional. Key is the substring to search for in the intro and title, while the value is the event type it will be imbibed with. Since Nationbuilder doesn't have event types|
+| `supergroup` | "Group name associated with the event" |
+
+
+## BlueStateDigital
+
+```
+# source_url = "http://go.website.com/page/event/search_results"
+# scraper = bsd.EventsScraper(source_url, supergroup="SuperGroup")
+```
